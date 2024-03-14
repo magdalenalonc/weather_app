@@ -31,8 +31,11 @@ class WeatherScreen extends StatelessWidget {
               width: double.infinity,
               child: Card(
                 elevation: 10,
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(16.0),
                   child: Column(
                     children: [
                       Text(
@@ -42,12 +45,12 @@ class WeatherScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16),
                       Icon(
                         Icons.cloud,
                         size: 54,
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: 16),
                       Text(
                         'Rain',
                         style: TextStyle(fontSize: 20),
