@@ -139,35 +139,22 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                const SingleChildScrollView(
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      HourlyForecastItem(
-                        time: '00:00',
-                        icon: Icons.cloud,
-                        temperature: '14°C',
-                      ),
-                      HourlyForecastItem(
-                        time: '03:00',
-                        icon: Icons.sunny,
-                        temperature: '15°C',
-                      ),
-                      HourlyForecastItem(
-                        time: '06:00',
-                        icon: Icons.cloud,
-                        temperature: '18°C',
-                      ),
-                      HourlyForecastItem(
-                        time: '09:00',
-                        icon: Icons.sunny,
-                        temperature: '23°C',
-                      ),
-                      HourlyForecastItem(
-                        time: '12:00',
-                        icon: Icons.sunny,
-                        temperature: '26°C',
-                      ),
+                      for (int i = 0; i < 5; i++)
+                        HourlyForecastItem(
+                          time: data['list'][i + 1]['dt_txt'],
+                          icon: data['list'][i + 1]['weather'][0]['main'] ==
+                                      'Clouds' ||
+                                  data['list'][i + 1]['weather'][0]['main'] ==
+                                      'Rain'
+                              ? Icons.cloud
+                              : Icons.sunny,
+                          temperature:
+                              '${data['list'][i + 1]['main']['temp']}°C',
+                        ),
                     ],
                   ),
                 ),
