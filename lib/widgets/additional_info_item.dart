@@ -18,7 +18,7 @@ class AdditionalInfoItem extends StatelessWidget {
       children: [
         Icon(
           icon,
-          size: 32,
+          size: 30,
         ),
         const SizedBox(height: 8),
         Text(label),

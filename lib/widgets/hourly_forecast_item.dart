@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/widgets/dynamic_icon_widget.dart';
 
 class HourlyForecastItem extends StatelessWidget {
   const HourlyForecastItem({
@@ -9,7 +10,7 @@ class HourlyForecastItem extends StatelessWidget {
   });
 
   final String time;
-  final IconData icon;
+  final DynamicIconWidget icon;
   final String temperature;
 
   @override
@@ -34,10 +35,7 @@ class HourlyForecastItem extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
             const SizedBox(height: 8),
-            Icon(
-              icon,
-              size: 32,
-            ),
+            icon,
             const SizedBox(height: 8),
             Text(temperature),
           ],
