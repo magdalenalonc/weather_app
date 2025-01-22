@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/widgets/dynamic_icon_widget.dart';
+import 'package:weather_app/presentation/widgets/dynamic_icon_widget.dart';
 
 class HourlyForecastItem extends StatelessWidget {
   const HourlyForecastItem({

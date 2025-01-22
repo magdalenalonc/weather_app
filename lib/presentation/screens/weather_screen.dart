@@ -4,9 +4,9 @@ import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:weather_app/widgets/additional_info_item.dart';
-import 'package:weather_app/widgets/dynamic_icon_widget.dart';
-import 'package:weather_app/widgets/hourly_forecast_item.dart';
+import 'package:weather_app/presentation/widgets/additional_info_item.dart';
+import 'package:weather_app/presentation/widgets/dynamic_icon_widget.dart';
+import 'package:weather_app/presentation/widgets/hourly_forecast_item.dart';
 import 'package:weather_app/secrets.dart';
 import 'package:weather_icons/weather_icons.dart';
 
